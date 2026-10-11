@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Random Bible Verse Generator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+	<h1>Random Bible Verse:</h1>
+
+
+<section class="verse-card">
+
+	
+<p id="verse-label">Welcome to</p>
+	
+<p id="verse">
+	Random Bible Verse Generator!
+	
+</p>
+
+</section>
+	
+<div class="button-container">
+
+<button id="random-button">
+	Random Bible Verse
+
+</button>
+
+<button id="favorite-button">
+	❤️Favorite Verse
+	
+</button>
+
+</div>
+
+<div class="bottom-button-container">
+    <button id="about-button">❓ About This Verse</button>
+    <button id="copy-button">📋 Copy Verse</button>
+    <button id="notes-button">📝 My Notes</button>
+</div>
+
+<section id="about-section">
+
+    <h2>About This Verse</h2>
+
+    <p id="about-text"></p>
+
+</section>
+
+<!-- PERSONAL NOTES ON VERSES -->
+
+<section id="notes-section">
+
+    <h2>📝 My Notes </h2>
+
+    <p>
+        Write your thoughts, reflections, or what this
+        verse means to you.
+    </p>
+
+    <textarea
+        id="verse-note"
+        placeholder="Write your personal reflection here..."
+        rows="5"
+    ></textarea>
+
+    <button id="save-note-button">
+        💾 Save Note
+    </button>
+
+    <p id="note-status"></p>
+
+</section>
+
+<button id="menu-button">
+    ☰
+</button>
+
+<nav id="side-menu">
+
+    <a href="index.html">
+        🏠 Random Verse
+    </a>
+
+    <a href="favorites.html">
+        ❤️ Favorites
+    </a>
+
+    <a href="verse-of-the-day.html">
+        📅 Verse of the Day
+    </a>
+
+    <a href="bible.html">
+        📖 Bible Reading
+    </a>
+ 
+    <a href="journal.html">
+        📔 Personal Journal
+    </a>
+
+    <button id="dark-mode-button">
+        🌙 Dark Mode
+    </button>
+
+</nav>
+
+</main>
+	
+<script src="verses.js"></script>
+<script src="script.js"></script>
+<script src="menu.js"></script>
+<script src="dark-mode.js"></script>
+
+</body>
+
+</html>

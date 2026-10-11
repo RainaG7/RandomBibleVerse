@@ -1,0 +1,1309 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef4ff;
+    color: #172554;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+
+    color: #1e3a8a;
+}
+
+.verse-card {
+    background: white;
+
+    padding: 45px 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
+
+    margin-bottom: 30px;
+
+    border: 1px solid #dbeafe;
+}
+
+#verse-label {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #4f46e5;
+
+    margin-bottom: 20px;
+}
+
+#verse {
+    font-size: 28px;
+
+    line-height: 1.5;
+
+    color: #172554;
+
+    margin: 0;
+}
+
+
+/* MAIN BUTTONS */
+
+.button-container {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.button-container button {
+    flex: 1;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #6366f1;
+
+    color: white;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button-container button:hover {
+    background: #4f46e5;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+
+/* COPY BUTTON */
+
+#copy-button {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #e0e7ff;
+
+    color: #3730a3;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+#copy-button:hover {
+    background: #c7d2fe;
+
+    transform: translateY(-2px);
+}
+
+
+/* ABOUT BUTTON */
+
+#about-button {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border: 2px solid #93c5fd;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#about-button:hover {
+    background: #dbeafe;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.18);
+}
+
+
+/* ABOUT SECTION */
+
+#about-section {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(30, 58, 138, 0.1);
+
+    border: 1px solid #dbeafe;
+
+    text-align: left;
+}
+
+#about-section h2 {
+    margin-top: 0;
+
+    color: #1e3a8a;
+}
+
+#about-text {
+    line-height: 1.6;
+
+    color: #334155;
+}
+
+
+/* FAVORITES PAGE */
+
+#favorites-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.favorite-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #dbeafe;
+
+    box-shadow: 0 5px 20px rgba(30, 58, 138, 0.1);
+
+    text-align: left;
+}
+
+.favorite-card h3 {
+    margin-top: 0;
+
+    color: #1e3a8a;
+
+    font-size: 20px;
+}
+
+.favorite-card p {
+    color: #334155;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+.remove-favorite {
+    margin-top: 10px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.remove-favorite:hover {
+    background: #fecaca;
+
+    transform: translateY(-2px);
+}
+
+.empty-favorites {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #dbeafe;
+
+    box-shadow: 0 5px 20px rgba(30, 58, 138, 0.1);
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+/* MENU BUTTON */
+#menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #1e3a8a;
+    color: white;
+
+    font-size: 26px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition: left 0.3s ease, background 0.2s ease;
+}
+
+#menu-button:hover {
+    background: #2563eb;
+}
+
+/* SLIDING SIDEBAR */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 270px;
+    max-width: 85vw;
+    height: 100vh;
+
+    padding: 90px 20px 25px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background: #ffffff;
+    border-right: 1px solid #dbeafe;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.12);
+
+    overflow-y: auto;
+    z-index: 1000;
+
+    transform: translateX(-100%);
+    visibility: hidden;
+
+    transition:
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+/* SIDEBAR OPEN */
+#side-menu.open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* SIDEBAR LINKS */
+#side-menu a,
+#side-menu button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #eef4ff;
+    color: #1e3a8a;
+
+    font-size: 16px;
+    font-family: inherit;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#side-menu a:hover,
+#side-menu button:hover {
+    background: #dbeafe;
+}
+
+/* DARK MODE */
+body.dark-mode #side-menu {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark-mode #side-menu a,
+body.dark-mode #side-menu button {
+    background: #263449;
+    color: #e5edff;
+}
+
+body.dark-mode #side-menu a:hover,
+body.dark-mode #side-menu button:hover {
+    background: #334155;
+}
+
+/* DARK MODE */
+
+body.dark-mode {
+    background: #0f172a;
+
+    color: #e2e8f0;
+}
+
+body.dark-mode h1 {
+    color: #c7d2fe;
+}
+
+body.dark-mode .verse-card {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #verse {
+    color: #e2e8f0;
+}
+
+body.dark-mode #verse-label {
+    color: #a5b4fc;
+}
+
+body.dark-mode #about-section {
+    background: #1e293b;
+
+    border-color: #334155;
+}
+
+body.dark-mode #about-section h2 {
+    color: #c7d2fe;
+}
+
+body.dark-mode #about-text {
+    color: #cbd5e1;
+}
+
+body.dark-mode #side-menu {
+    background: #1e293b;
+
+    border-color: #6366f1;
+}
+
+body.dark-mode #side-menu a {
+    background: #312e81;
+
+    color: #e0e7ff;
+}
+
+body.dark-mode #side-menu a:hover {
+    background: #3730a3;
+}
+
+body.dark-mode #menu-button {
+    background: #1e293b;
+
+    color: #c7d2fe;
+}
+
+body.dark-mode #menu-button:hover {
+    background: #312e81;
+}
+
+body.dark-mode #dark-mode-button {
+    background: #334155;
+
+    color: #e2e8f0;
+}
+
+body.dark-mode #dark-mode-button:hover {
+    background: #475569;
+}
+
+
+/* MOBILE DESIGN */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    #verse {
+        font-size: 21px;
+    }
+
+    .verse-card {
+        padding: 30px 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+
+    #copy-button,
+    #about-button {
+        width: 100%;
+    }
+
+    #menu-button {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+    #side-menu {
+        width: 200px;
+    }
+
+}
+
+/* SMOOTH PAGE ANIMATION */
+
+.container {
+    animation: fadeIn 0.6s ease;
+}
+
+.verse-card {
+    animation: slideUp 0.6s ease;
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* BUTTON PRESS EFFECT */
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* BIBLE READING PAGE */
+
+#reading-section {
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dbeafe;
+
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.12);
+
+    text-align: left;
+
+    animation: slideUp 0.5s ease;
+}
+
+#chapter-title {
+    margin-top: 0;
+
+    color: #1e3a8a;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+#chapter-text {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #334155;
+}
+
+/* BIBLE READING CONTROLS */
+
+#book-select,
+#chapter-select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    border: 2px solid #bfdbfe;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    color: #172554;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#book-select:focus,
+#chapter-select:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+
+#read-button {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #6366f1;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#read-button:hover {
+    background: #4f46e5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+/* BIBLE READING DARK MODE */
+
+body.dark-mode #book-select,
+body.dark-mode #chapter-select {
+    background: #1e293b;
+
+    color: #e2e8f0;
+
+    border-color: #475569;
+}
+
+body.dark-mode #book-select:focus,
+body.dark-mode #chapter-select:focus {
+    border-color: #818cf8;
+
+    box-shadow:
+        0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+body.dark-mode #reading-section {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #chapter-title {
+    color: #c7d2fe;
+}
+
+body.dark-mode #chapter-text {
+    color: #cbd5e1;
+}
+
+/* DARK MODE BUTTON */
+
+#dark-mode-button {
+    padding: 12px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    color: #3730a3;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#dark-mode-button:hover {
+    background: #dbeafe;
+
+    transform: translateY(-2px);
+}
+
+/* DARK MODE LINKS */
+
+body.dark-mode a {
+    color: #a5b4fc;
+}
+
+body.dark-mode a:hover {
+    color: #c7d2fe;
+}
+
+#side-menu #dark-mode-button {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    color: #3730a3;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#side-menu #dark-mode-button:hover {
+    background: #dbeafe;
+
+    transform: translateX(-3px);
+}
+
+
+body.dark-mode #side-menu #dark-mode-button {
+    background: #312e81;
+
+    color: #e0e7ff;
+}
+
+body.dark-mode #side-menu #dark-mode-button:hover {
+    background: #3730a3;
+}
+
+/* PRETTY DAILY FAVORITE BUTTON */
+
+#daily-favorite-button {
+    display: block;
+    margin: 18px auto 8px;
+    padding: 12px 24px;
+
+    background: #f3e8ff;
+    color: #6b21a8;
+
+    border: 1px solid #d8b4fe;
+    border-radius: 14px;
+
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(107, 33, 168, 0.08);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#daily-favorite-button:hover {
+    background: #e9d5ff;
+    box-shadow: 0 5px 12px rgba(107, 33, 168, 0.15);
+    transform: translateY(-2px);
+}
+
+#daily-favorite-button:active {
+    transform: translateY(0);
+}
+
+
+/* PRETTY PERSONAL NOTES SECTION */
+
+#notes-section {
+    margin-top: 28px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(30, 58, 138, 0.07);
+    text-align: center;
+}
+
+#notes-section h2 {
+    color: #1e3a8a;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#notes-section p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#verse-note {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 140px;
+    margin-top: 18px;
+    padding: 15px;
+    background: #f8faff;
+    color: #1e293b;
+    border: 1px solid #c7dafe;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#verse-note:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+#verse-note::placeholder {
+    color: #94a3b8;
+}
+
+#save-note-button {
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: #f3e8ff;
+    color: #6b21a8;
+    border: 1px solid #d8b4fe;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(107, 33, 168, 0.08);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#save-note-button:hover {
+    background: #e9d5ff;
+    transform: translateY(-2px);
+}
+
+#save-note-button:active {
+    transform: translateY(0);
+}
+
+#note-status {
+    min-height: 20px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #15803d;
+}
+
+
+/* SMALLER BOTTOM BUTTONS */
+
+.bottom-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.bottom-button-container button {
+    padding: 9px 14px;
+    font-size: 13px;
+    font-family: inherit;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.bottom-button-container button:hover {
+    transform: translateY(-2px);
+}
+
+#notes-section {
+    display: none;
+}
+
+#notes-section.notes-open {
+    display: block;
+}
+
+
+/* MATCHING BOTTOM BUTTONS */
+
+.bottom-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.bottom-button-container button {
+    padding: 10px 16px;
+    background: #f3e8ff;
+    color: #6b21a8;
+    border: 1px solid #d8b4fe;
+    border-radius: 13px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(107, 33, 168, 0.08);
+    transition: background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.bottom-button-container button:hover {
+    background: #e9d5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(107, 33, 168, 0.15);
+}
+
+.bottom-button-container button:active {
+    transform: translateY(0);
+}
+
+
+/* MATCH ALL THREE BOTTOM BUTTONS TO ABOUT THIS VERSE */
+
+.bottom-button-container button,
+.bottom-button-container #about-button,
+.bottom-button-container #copy-button,
+.bottom-button-container #notes-button {
+    background: #ffffff;
+    color: #1e3a8a;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.06);
+}
+
+.bottom-button-container button:hover,
+.bottom-button-container #about-button:hover,
+.bottom-button-container #copy-button:hover,
+.bottom-button-container #notes-button:hover {
+    background: #eff6ff;
+    color: #1e3a8a;
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.12);
+}
+
+
+/* ALIGN THE THREE BOTTOM BUTTONS */
+
+.bottom-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.bottom-button-container button {
+    box-sizing: border-box;
+    margin: 0;
+    align-self: center;
+}
+
+
+/* MATCHING BOTTOM BUTTONS */
+
+.bottom-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.bottom-button-container #about-button,
+.bottom-button-container #copy-button,
+.bottom-button-container #notes-button {
+    margin: 0;
+    padding: 12px 25px;
+    border: 2px solid #93c5fd;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #eff6ff;
+    color: #2563eb;
+    font-family: inherit;
+    line-height: normal;
+    box-sizing: border-box;
+    align-self: center;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.bottom-button-container #about-button:hover,
+.bottom-button-container #copy-button:hover,
+.bottom-button-container #notes-button:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+
+/* ============================= */
+/* PERSONAL JOURNAL DESIGN */
+/* ============================= */
+
+.journal-intro {
+    max-width: 500px;
+    margin: 0 auto 25px;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.journal-card {
+    margin: 25px auto;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(30, 58, 138, 0.07);
+    text-align: left;
+}
+
+.journal-card h2,
+.journal-entries-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-size: 21px;
+    text-align: center;
+}
+
+.journal-card label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #1e3a8a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#journal-title,
+#journal-text {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    background: #f8faff;
+    color: #1e293b;
+    border: 1px solid #c7dafe;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#journal-title:focus,
+#journal-text:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+#journal-text {
+    min-height: 180px;
+    line-height: 1.7;
+    resize: vertical;
+}
+
+#journal-title::placeholder,
+#journal-text::placeholder {
+    color: #94a3b8;
+}
+
+#save-entry-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 2px solid #93c5fd;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#save-entry-button:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+}
+
+#journal-status {
+    min-height: 20px;
+    margin-bottom: 0;
+    color: #15803d;
+    font-size: 14px;
+    text-align: center;
+}
+
+.journal-entries-section {
+    margin-top: 35px;
+}
+
+#journal-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* JOURNAL EDIT AND DELETE BUTTONS */
+
+.journal-action-button {
+    padding: 9px 16px;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #93c5fd;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.journal-action-button:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+}
+
+
+/* PRETTY SAVED JOURNAL ENTRIES */
+
+.journal-entry-card {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.07);
+    overflow-wrap: anywhere;
+}
+
+.journal-entry-card h3 {
+    color: #1e3a8a;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.journal-entry-date {
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.journal-entry-text {
+    background: #f8faff;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    padding: 16px;
+    color: #334155;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+/* PRETTY EDIT AND DELETE BUTTONS */
+
+.journal-action-button {
+    padding: 10px 18px;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 2px solid #93c5fd;
+    border-radius: 18px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.06);
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.journal-action-button:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+}
+
+.journal-action-button:active {
+    transform: translateY(0);
+}
+
+
+/* Journal text in dark mode */
+body.dark-mode .journal-intro {
+    color: #cbd5e1;
+}
+
+body.dark-mode .journal-entries-section h2 {
+    color: #e2e8f0;
+}

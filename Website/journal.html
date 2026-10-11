@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>📔 My Personal Journal</h1>
+
+        <p class="journal-intro">
+            A little space just for you.
+            Write your thoughts, reflections, and prayers.
+        </p>
+
+        <section class="journal-card">
+            <h2>✨ New Entry</h2>
+
+            <label for="journal-title">Entry Title</label>
+            <input
+                type="text"
+                id="journal-title"
+                placeholder="Give your entry a title..."
+            >
+
+            <label for="journal-text">Your Thoughts</label>
+            <textarea
+                id="journal-text"
+                rows="8"
+                placeholder="Start writing here..."
+            ></textarea>
+
+            <button id="save-entry-button">💾 Save Entry</button>
+            <p id="journal-status"></p>
+        </section>
+
+        <section class="journal-entries-section">
+            <h2>📚 My Previous Entries</h2>
+            <div id="journal-entries"></div>
+        </section>
+
+        <!-- SLIDING MENU -->
+        <button id="menu-button">☰</button>
+
+        <nav id="side-menu">
+            <a href="index.html">🏠 Random Verse</a>
+            <a href="favorites.html">❤️ Favorites</a>
+            <a href="verse-of-the-day.html">📅 Verse of the Day</a>
+            <a href="bible.html">📖 Bible Reading</a>
+            <a href="journal.html">📔 Personal Journal</a>
+
+            <button id="dark-mode-button">🌙 Dark Mode</button>
+        </nav>
+
+           </main>
+
+    <script src="journal.js"></script>
+    <script src="menu.js"></script>
+    <script src="dark-mode.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bible Reading</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <h1>📖 Bible Reading</h1>
+
+
+        <section class="verse-card">
+
+            <h2>Choose a Bible Book</h2>
+
+            <select id="book-select">
+
+                <option value="">Select a book</option>
+
+                <option value="Genesis">Genesis</option>
+
+                <option value="Exodus">Exodus</option>
+
+                <option value="Matthew">Matthew</option>
+
+                <option value="Mark">Mark</option>
+
+                <option value="Luke">Luke</option>
+
+                <option value="John">John</option>
+
+                <option value="Romans">Romans</option>
+
+                <option value="Revelation">Revelation</option>
+
+            </select>
+
+
+            <h2>Choose a Chapter</h2>
+
+            <select id="chapter-select">
+
+                <option value="">Select a chapter</option>
+
+                <option value="1">Chapter 1</option>
+
+                <option value="2">Chapter 2</option>
+
+                <option value="3">Chapter 3</option>
+
+            </select>
+
+
+            <button id="read-button">
+                📖 Read Chapter
+            </button>
+
+        </section>
+
+<section id="reading-section">
+
+    <h2 id="chapter-title"></h2>
+
+    <div id="chapter-text"></div>
+
+</section>
+
+<button id="menu-button">
+    ☰
+</button>
+
+
+<nav id="side-menu">
+
+    <a href="index.html">
+        🏠 Random Verse
+    </a>
+
+    <a href="favorites.html">
+        ❤️ Favorites
+    </a>
+
+    <a href="verse-of-the-day.html">
+        📅 Verse of the Day
+    </a>
+
+    <a href="bible.html">
+        📖 Bible Reading
+    </a>
+
+ <a href="journal.html">
+        📔 Personal Journal
+    </a>
+
+    <button id="dark-mode-button">
+        🌙 Dark Mode
+    </button>
+
+</nav>
+
+           </main>
+
+<script src="bible.js"></script>
+<script src="menu.js"></script>
+<script src="dark-mode.js"></script>
+
+</body>
+
+</html>
